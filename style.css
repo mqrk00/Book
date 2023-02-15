@@ -1,0 +1,57 @@
+body{
+    width: 100%;
+    margin: 0;
+}
+#nav{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70%; 
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
+    margin-bottom: 100px;
+}
+#addBookBtn{
+    padding: 20px;
+    background: url("plus\ icon.png");
+    background-size: cover;
+    border: none;
+}
+#formContainer{
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height:500px;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#formContainer.show-form{
+    visibility: visible;
+    pointer-events: all;
+
+}
+#booksContainer{
+    margin: auto;
+    width: 80%;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bookDiv{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(139, 139, 255);
+
+    
+}
