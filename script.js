@@ -24,7 +24,7 @@ form.onsubmit = (event) => {
   formContainer.classList.toggle("show-form");
   addBookToLibrary(name, author, pages, readStatus);
   backgroundCover.classList.remove("showBackgroundCover");
- form.reset();
+  form.reset();
 };
 function showForm() {
   formContainer.classList.add("show-form");
@@ -79,7 +79,7 @@ function makeBookDivs() {
 function displayBooks(nameDisplay, authorDisplay, pagesDisplay) {
   nameDisplay.textContent = myLibrary[myLibrary.length - 1].name;
   authorDisplay.textContent = myLibrary[myLibrary.length - 1].author;
-  pagesDisplay.textContent = myLibrary[myLibrary.length - 1].pages;
+  pagesDisplay.textContent = `${myLibrary[myLibrary.length - 1].pages} pages`;
 }
 
 booksContainer.addEventListener("click", (e) => {
@@ -131,5 +131,7 @@ function backgrCoverRemove()
 {
   formContainer.classList.remove("show-form");
   backgroundCover.classList.remove("showBackgroundCover");
+  form.reset();
+
 }
 
