@@ -1,57 +1,131 @@
-body{
-    width: 100%;
-    margin: 0;
+body {
+  width: 100%;
+  margin: 0;
+  background-color: #ececec;
 }
-#nav{
-    height: 80px;
+#nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60%;
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 6px -6px #222;
+  margin-bottom: 100px;
+  background-color: white;
+}
+#addBookBtn {
+  padding: 30px;
+  background: url("plus\ icon.png");
+  background-position: center;
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+#addBookBtn:hover {
+  cursor: pointer;
+  transform: scale(1.15) rotate(90deg);
+}
+#formContainer {
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 500px;
+  background-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000000;
+}
+#formContainer.show-form {
+  visibility: visible;
+  pointer-events: all;
+}
+#form {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 70%; 
-    -webkit-box-shadow: 0 4px 6px -6px #222;
-    -moz-box-shadow: 0 4px 6px -6px #222;
-    box-shadow: 0 4px 6px -6px #222;
-    margin-bottom: 100px;
+    flex-direction: column;
 }
-#addBookBtn{
-    padding: 20px;
-    background: url("plus\ icon.png");
-    background-size: cover;
+#form input {
+  margin: 8px 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: none;
+  border-radius: 5px;
+
+}
+#form input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: none;
+ 
+}
+#form input[type="number"] {
+    width: 100%;
+  padding: 12px 20px;
+  
+  border: none;
+  
+}
+#form input[type="submit"] {
+  padding: 10px 15px;
+}
+#readStatus {
     border: none;
 }
-#formContainer{
+.read {
+    padding: 10px 20px;
+    background-color: rgb(110, 255, 110);
+    color: black;
+}
+.notRead {
+    padding: 10px 20px;
+    background-color: rgb(255, 84, 84);
+    color: black;
+}
+#booksContainer {
+  margin: auto;
+  width: 80%;
+  height: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+
+.bookDiv {
+  height: 100%;
+  width: 20%;
+  background-color: rgb(139, 139, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.deletebtn {
+    padding: 10px 20px;
+}
+#backgroundCover {
     visibility: hidden;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height:500px;
-    background-color: blueviolet;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#formContainer.show-form{
-    visibility: visible;
-    pointer-events: all;
-
-}
-#booksContainer{
-    margin: auto;
-    width: 80%;
-    height: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.bookDiv{
+    position: absolute;
+    top:0;
+    z-index: 100000;
+    width: 100%;
     height: 100%;
-    width: 20%;
-    background-color: rgb(139, 139, 255);
-
-    
+    background-color: #000000;
+    opacity: 0.4;
+}
+#backgroundCover.showBackgroundCover {
+    visibility: visible;
 }

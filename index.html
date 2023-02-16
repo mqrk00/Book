@@ -9,8 +9,9 @@
     
 </head>
 <body>
+    <div id="backgroundCover"></div>
     <div id="nav">
-        <div id="logo">logo</div>
+        <div id="logo"><h1>LIBRARY</h1></div>
         <button id="addBookBtn" onclick="showForm()"></button>
     </div>
     
@@ -18,9 +19,10 @@
     
     <div id="formContainer">
         <form id="form">
-            <input type="text" id="name"><br>
-            <input type="text" id="author"><br>
-            <input type="text" id="pages"><br>
+            <input type="text" id="name" placeholder="Title" required><br>
+            <input type="text" id="author" placeholder="Author" required><br>
+            <input type="number" id="pages" min="0" placeholder="Pages" required><br>
+            <input type="button" id="readStatus" class="read" value="Read" onclick="onOffinForm()"><br>
             <input type="submit" value="Submit">
         </form>
     </div>
